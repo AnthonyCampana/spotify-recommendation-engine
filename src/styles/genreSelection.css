@@ -1,0 +1,10 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.multiselect-dropdown {
+    margin-top: 5%;
+    background-color: #FFFFFF;
+    font-size: 14px;
+}
