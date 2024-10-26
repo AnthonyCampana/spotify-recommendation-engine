@@ -56,7 +56,21 @@ export default function SearchForm({ authentication, changeArtist }) {
             console.error(err); 
           }
         }
-  
+
+        /*
+        async function userProfile() {
+          try {
+            const profile = await axios.get('https://api.spotify.com/v1/me', {
+              headers: {
+                Authorization: 'Bearer ' + authentication
+              }
+            });
+          } catch(err) {
+            console.error(err); 
+          }
+        }
+        */
+
         userTopItems();
         recommendationGenres()
       }, [authentication]);
@@ -75,7 +89,6 @@ export default function SearchForm({ authentication, changeArtist }) {
         }
         return image
       })
-
       setArtistImage(mutatedArtistImage);      
     };
 
@@ -91,7 +104,7 @@ export default function SearchForm({ authentication, changeArtist }) {
       changeArtist(artistId, selectedGenres.join(','));
     }
 
-    const activeStatus = artistImage.map((image) => image.active);
+    const activeStatus = artistImage.map((image) => image.active);  
     if( artistImage.length !== 0 ) {
       return (
         <form onSubmit={handleSubmit} className="searchForm-container">
@@ -114,7 +127,7 @@ export default function SearchForm({ authentication, changeArtist }) {
     }
     return(
         <div>
-          <h1> Loading... </h1>
+          <h1> Loading in searchForm...</h1>
         </div>
       );
 }

@@ -4,9 +4,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import querystring from 'querystring';
 
-const CLIENT_ID = "30151cc0246445efa55f400ed7a0bdeb";
-const CLIENT_SECRET = "00758daae6374cf0b8b9fe9061e29f8f";
-const REDIRECT_URI = "http://localhost:3000/callback";
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI;
 
 const Callback = () => {
     const location = useLocation();
@@ -40,6 +40,7 @@ const Callback = () => {
                 redirect_uri: REDIRECT_URI,
                 grant_type: 'authorization_code'
             }
+            console.log("in the fetchToken function");
 
             try {
                 const response = await axios.post(
@@ -51,14 +52,19 @@ const Callback = () => {
 
                 window.localStorage.setItem('access_token', access_token);
                 window.localStorage.setItem('refresh_token', refresh_token);
+                console.log("in the try block");
 
                 navigate('/');
+                return 
             } catch(err) {
                 console.error("Error fetching the token", err);
                 navigate('/?error=invalid_token');
             }
         }
 
+        console.log(process.env);
+        console.log(CLIENT_ID);
+        console.log(CLIENT_SECRET);
         fetchToken();
     }, [location.search, navigate]);
 

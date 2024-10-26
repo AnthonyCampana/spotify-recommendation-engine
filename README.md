@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## Spotify Recommendation 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Spotify Recommendation
 
-## Available Scripts
+* [x] Users can authenticate using their spotify credentials, to give the app access to user's account information
 
-In the project directory, you can run:
+* [x] Users can select one or up two five of their most recently listened to artists to help assist in the recommendation.
 
-### `npm start`
+* [x] Users can select one or up to five genres from the multi-select dropdown. This will only be visible once atleast one artist is selected from the previous step.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [x] Users can submit their recommendation request by selecting the submit button on the middle of the screen. This will only be visible once the user has selected at least one genre.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [x] Users can view the album image, artist name given from the spotify recommendation algorithm. 
 
-### `npm test`
+* [x] Users can logout by clicking the "Logout" button at the top right of the screen. Once clicked users will be redirected unauthenticated home page. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Recording
+<img src="videoWalkthrough.mp4" title="Video Walkthrough" alt="Spotify Recommendation engine video walkthrough" />
 
-### `npm run build`
+## Installation and Setup Instructions  
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installation:
+`npm install`  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To Run Test Suite:  
+`npm test`  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To Start Server:
+`npm start`  
 
-### `npm run eject`
+To Visit App:
+`http://localhost:3000/`  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Reflection
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* what is the context of this project ?
+    * This project arose from my yurning to discovering new music. Having being exposed to a lot of different instruments, and different types of genres at a young age, Ive always had a deep interest in music. Due to this fondness towards music, being able to discover new artists and musics, lead me to create this application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* What did you set out to build ?
+    * When I designed and developed this application, I wanted user to to be able to receive music recommendation based and existing artists/music they already enjoy. After looking over the Spotify API documentation, I was able to refine my application functionality by being able to pull the user's 5 most recently to artist and an array of genres that users can use to receive a recommendation.    
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* What were some unexpected obstacles ?
+    * One unexpected obstacle I experienced during the development of this project was implementing the spotify authorization code flow. This proved to be challenging as the documentation was written using the express framework, while I was using React as my framework.  
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* What tools did you use to implement this project ?
+    * The tool used to develop this application was Javascript, but more specifically the React framework.
